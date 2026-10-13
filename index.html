@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Amos Danang Jaya</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0a0a0a',
+                        cardBg: '#141414',
+                        electricOrange: '#ff6600',
+                        electricOrangeHover: '#e55b00',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a0a;
+            color: #f3f4f6;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff6600;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 antialiased selection:bg-electricOrange selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-zinc-800 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="text-xl font-bold tracking-wider text-white flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-electricOrange inline-block animate-pulse"></span>
+                AMOS<span class="text-electricOrange">.DEV</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#hero" class="hover:text-electricOrange transition-colors">Beranda</a>
+                <a href="#about" class="hover:text-electricOrange transition-colors">Tentang Saya</a>
+                <a href="#education" class="hover:text-electricOrange transition-colors">Pendidikan</a>
+                <a href="#skills" class="hover:text-electricOrange transition-colors">Keahlian</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-electricOrange text-white font-medium hover:bg-electricOrangeHover transition-all shadow-lg shadow-electricOrange/20">Hubungi Saya</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl text-gray-300 hover:text-electricOrange focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-zinc-800 px-6 py-4 space-y-3">
+            <a href="#hero" class="block py-2 hover:text-electricOrange transition-colors mobile-link">Beranda</a>
+            <a href="#about" class="block py-2 hover:text-electricOrange transition-colors mobile-link">Tentang Saya</a>
+            <a href="#education" class="block py-2 hover:text-electricOrange transition-colors mobile-link">Pendidikan</a>
+            <a href="#skills" class="block py-2 hover:text-electricOrange transition-colors mobile-link">Keahlian</a>
+            <a href="#contact" class="block text-center py-2.5 mt-2 rounded-full bg-electricOrange text-white font-medium hover:bg-electricOrangeHover mobile-link">Hubungi Saya</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center pt-24 pb-16 px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+            <!-- Left Text Content -->
+            <div class="space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-xs text-electricOrange font-medium">
+                    <i class="fa-solid fa-circle-dot text-[10px]"></i> Tersedia untuk Proyek & Magang
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+                    Halo, Saya <br><span class="text-electricOrange">Amos Danang Jaya</span>
+                </h1>
+                <p class="text-gray-400 text-base sm:text-lg max-w-lg mx-auto md:mx-0">
+                    TKJ Student | Hardware & OS Specialist - SMK 3 Perguruan Cikini
+                </p>
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+                    <a href="#contact" class="px-7 py-3.5 rounded-full bg-electricOrange text-white font-semibold hover:bg-electricOrangeHover transition-all shadow-lg shadow-electricOrange/30 flex items-center gap-2">
+                        <span>Hubungi Saya</span>
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="#skills" class="px-7 py-3.5 rounded-full bg-zinc-900 border border-zinc-800 text-gray-200 font-semibold hover:border-electricOrange transition-all">
+                        Lihat Keahlian
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Profile Photo -->
+            <div class="flex justify-center">
+                <div class="relative group">
+                    <!-- Glowing Frame Background -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-electricOrange to-amber-600 rounded-3xl blur-md opacity-75 group-hover:opacity-100 transition duration-500"></div>
+                    
+                    <!-- Image Container -->
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden bg-zinc-900 border-2 border-zinc-800 shadow-2xl">
+                        <img src="amos.jpeg" alt="Amos Danang Jaya" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-4 -right-4 bg-cardBg border border-zinc-800 px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-electricOrange/10 flex items-center justify-center text-electricOrange">
+                            <i class="fa-solid fa-microchip text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-zinc-400">Spesialisasi</p>
+                            <p class="text-sm font-bold text-white">Hardware & OS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center space-y-4 mb-16">
+            <h2 class="text-xs font-bold tracking-widest text-electricOrange uppercase">Mengenal Lebih Dekat</h2>
+            <h3 class="text-3xl sm:text-4xl font-bold text-white">Tentang Saya</h3>
+            <div class="w-16 h-1 bg-electricOrange mx-auto rounded-full"></div>
+        </div>
+
+        <div class="bg-cardBg border border-zinc-800/80 rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-48 h-48 bg-electricOrange/5 rounded-full blur-3xl pointer-events-none"></div>
+            <p class="text-gray-300 text-base sm:text-lg leading-relaxed text-center sm:text-left relative z-10">
+                "Saya adalah siswa Teknik Komputer dan Jaringan (TKJ) di SMK 3 Perguruan Cikini. Saya memiliki keahlian dan minat mendalam dalam perangkat keras (hardware) dan sistem operasi, khususnya dalam merakit komputer, menginstal sistem operasi Windows, serta melakukan perawatan dan pemeliharaan komponen komputer agar tetap berkinerja optimal."
+            </p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center space-y-4 mb-16">
+            <h2 class="text-xs font-bold tracking-widest text-electricOrange uppercase">Latar Belakang Akademik</h2>
+            <h3 class="text-3xl sm:text-4xl font-bold text-white">Pendidikan</h3>
+            <div class="w-16 h-1 bg-electricOrange mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6">
+            <div class="bg-cardBg border border-zinc-800 hover:border-electricOrange/50 transition-all duration-300 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <div class="flex items-start gap-5">
+                    <div class="w-14 h-14 rounded-2xl bg-electricOrange/10 border border-electricOrange/20 flex items-center justify-center text-electricOrange text-2xl shrink-0">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-electricOrange/10 text-electricOrange inline-block mb-1">Status: Siswa Aktif</span>
+                        <h4 class="text-xl font-bold text-white">SMK 3 Perguruan Cikini</h4>
+                        <p class="text-gray-300 font-medium">Teknik Komputer dan Jaringan (TKJ)</p>
+                        <p class="text-sm text-zinc-400">Fokus mendalami infrastruktur jaringan, perakitan perangkat keras komputer, dan administrasi sistem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="text-center space-y-4 mb-16">
+            <h2 class="text-xs font-bold tracking-widest text-electricOrange uppercase">Keahlian & Kompetensi</h2>
+            <h3 class="text-3xl sm:text-4xl font-bold text-white">Keahlian Utama</h3>
+            <div class="w-16 h-1 bg-electricOrange mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Skill 1 -->
+            <div class="bg-cardBg border border-zinc-800 hover:border-electricOrange transition-all duration-300 rounded-3xl p-6 group hover:-translate-y-1.5 shadow-xl">
+                <div class="w-12 h-12 rounded-2xl bg-electricOrange/10 flex items-center justify-center text-electricOrange text-xl mb-6 group-hover:bg-electricOrange group-hover:text-white transition-all duration-300">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2">Merakit Komputer</h4>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    PC Assembly & Hardware setup yang aman, rapi, dan sesuai standar performa terbaik.
+                </p>
+            </div>
+
+            <!-- Skill 2 -->
+            <div class="bg-cardBg border border-zinc-800 hover:border-electricOrange transition-all duration-300 rounded-3xl p-6 group hover:-translate-y-1.5 shadow-xl">
+                <div class="w-12 h-12 rounded-2xl bg-electricOrange/10 flex items-center justify-center text-electricOrange text-xl mb-6 group-hover:bg-electricOrange group-hover:text-white transition-all duration-300">
+                    <i class="fa-brands fa-windows"></i>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2">Instalasi Windows & Driver</h4>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    Instalasi sistem operasi Windows bersih, konfigurasi software esensial, serta update driver terbaru.
+                </p>
+            </div>
+
+            <!-- Skill 3 -->
+            <div class="bg-cardBg border border-zinc-800 hover:border-electricOrange transition-all duration-300 rounded-3xl p-6 group hover:-translate-y-1.5 shadow-xl">
+                <div class="w-12 h-12 rounded-2xl bg-electricOrange/10 flex items-center justify-center text-electricOrange text-xl mb-6 group-hover:bg-electricOrange group-hover:text-white transition-all duration-300">
+                    <i class="fa-solid fa-broom-ball"></i>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2">Perawatan & Pemeliharaan</h4>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    Hardware maintenance berkala, pembersihan komponen, dan manajemen thermal paste agar optimal.
+                </p>
+            </div>
+
+            <!-- Skill 4 -->
+            <div class="bg-cardBg border border-zinc-800 hover:border-electricOrange transition-all duration-300 rounded-3xl p-6 group hover:-translate-y-1.5 shadow-xl">
+                <div class="w-12 h-12 rounded-2xl bg-electricOrange/10 flex items-center justify-center text-electricOrange text-xl mb-6 group-hover:bg-electricOrange group-hover:text-white transition-all duration-300">
+                    <i class="fa-solid fa-stethoscope"></i>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2">Diagnostic & Troubleshooting</h4>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    Analisis kerusakan perangkat keras, deteksi error system, serta solusi perbaikan cepat dan tepat.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="bg-cardBg border border-zinc-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden text-center space-y-8">
+            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-electricOrange/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="space-y-3">
+                <h2 class="text-xs font-bold tracking-widest text-electricOrange uppercase">Mari Terhubung</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white">Hubungi Saya</h3>
+                <p class="text-gray-400 max-w-md mx-auto text-sm sm:text-base">
+                    Punya pertanyaan seputar rakit PC, konsultasi hardware, atau kolaborasi? Jangan ragu untuk menghubungi saya.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:amos@example.com" class="px-6 py-3.5 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-electricOrange text-gray-200 font-medium flex items-center gap-3 transition-all">
+                    <i class="fa-solid fa-envelope text-electricOrange"></i>
+                    <span>Kirim Email</span>
+                </a>
+                <a href="https://wa.me/+62881025958717" target="_blank" class="px-6 py-3.5 rounded-2xl bg-electricOrange hover:bg-electricOrangeHover text-white font-medium flex items-center gap-3 transition-all shadow-lg shadow-electricOrange/20">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-800/80 py-8 text-center text-sm text-zinc-500 px-6">
+        <p>&copy; 2026 <span class="text-white font-medium">Amos Danang Jaya</span>. SMK 3 Perguruan Cikini. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
